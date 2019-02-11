@@ -1,5 +1,5 @@
 import unittest # Importing the unittest module
-from user import User # Importing the contact class
+from user import User # Importing the user class
 
 class TestUser(unittest.TestCase):
 
@@ -43,7 +43,7 @@ class TestUser(unittest.TestCase):
         '''
         User.user_list = []
 
-# other test cases here
+        # other test cases here
     def test_save_multiple_user(self):
         '''
         test_save_multiple_user to check if we can save multiple user
@@ -77,7 +77,19 @@ class TestUser(unittest.TestCase):
         found_user = User.find_by_email("vnyanki@gmail.com")
 
         self.assertEqual(found_user.user_name,test_user.user_name)    
- 
+    
+    def test_user_exists(self):
+        '''
+        test to check if we can return a Boolean  if we cannot find the user.
+        '''
+
+        self.new_user.save_user()
+        test_user = User("Nya","vava","0725296112","Nyanki","vnyanki@gmail.com","Kigali") # new contact
+        test_user.save_user()
+
+        user_exists = User.user_exist("vnyanki@gmail.com")
+
+        self.assertTrue(user_exists)
 
 if __name__ == '__main__':
     unittest.main()        
