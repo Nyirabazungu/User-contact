@@ -52,6 +52,14 @@ class User:
         Returns :
             Boolean: True or false depending if the user exists
         '''
+    @classmethod
+    def display_users(cls):
+        '''
+        method that returns the user list
+        '''
+        return cls.user_list
+
+
         for user in cls.user_list:
             if user.email== email:
                     return True

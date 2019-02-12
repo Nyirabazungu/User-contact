@@ -89,7 +89,13 @@ class TestUser(unittest.TestCase):
 
         user_exists = User.user_exist("vnyanki@gmail.com")
 
-        self.assertTrue(user_exists)
+        # self.assertTrue(user_exists)
+
+    def test_display_all_user(self):
+        '''
+        method that returns a list of all users saved
+        '''
+        self.assertEqual(User.display_users(),User.user_list)
 
 if __name__ == '__main__':
     unittest.main()        
