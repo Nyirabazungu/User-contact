@@ -1,6 +1,6 @@
 #!/usr/bin/env python3.6
 
-def create_user(first_name,lst_name,contact,user_name,email,password):
+def create_user(first_name,last_name,contact,user_name,email,password):
     '''
     Function to create a new user
     '''
@@ -52,11 +52,11 @@ def main():
      print('\n')
 
      while True:
-                    print("Use these short codes : cc - create a new contact, dc - display contacts, fc -find a contact, ex -exit the contact list ")
+                    print("Use these short codes : cu - create a new user, du - display users, fu -find a user, dl - delete users,ex -exit the user list ")
 
                     short_code = input().lower()
 
-                    if short_code == 'cc':
+                    if short_code == 'cu':
                             print("New User")
                             print("-"*10)
 
@@ -73,12 +73,12 @@ def main():
                             user_name = input()
 
                             print("email ...")
-                            email = input("Enter your E-mail: ")
+                            email = input()
 
                             print("Password ...")
-                            password = input("Enter password: ")
+                            password = input( )
 
-                        #     log=login("","")
+                      
 
 
                             save_users(create_user(first_name,last_name,contact,user_name,email,password)) # create and save new contact.
@@ -86,7 +86,7 @@ def main():
                             print(f"New User {first_name} {lname_name} created")
                             print ('\n')
 
-                    elif short_code == 'dc':
+                    elif short_code == 'du':
 
                             if display_users():
                                     print("Here is a list of all your users")
@@ -101,7 +101,7 @@ def main():
                                     print("You dont seem to have any users saved yet")
                                     print('\n')
 
-                    elif short_code == 'fc':
+                    elif short_code == 'fu':
 
                             print("Enter the email you want to search for")
 
@@ -115,6 +115,20 @@ def main():
                                     print(f"contact.......{search_user.contact}")
                             else:
                                     print("That user does not exist")
+
+                   
+                            
+                    elif del_user=='dl' ():  
+
+                                    print("Enter the something you want to delete")
+                                    
+                                    delete_user = input()
+                                   
+                                    user=(del_user [first_name,last_name,contact,user_name,email,password])
+                                    del user[first_name,last_name,contact,user_name,email,password]
+                                    
+                              
+
 
                     elif short_code == "ex":
                             print("Bye .......")
