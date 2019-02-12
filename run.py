@@ -118,14 +118,14 @@ def main():
 
                    
                             
-                    elif del_user=='dl' ():  
+                #     elif del_user=='dl' ():  
 
-                                    print("Enter the something you want to delete")
+                #                     print("Enter the something you want to delete")
                                     
-                                    delete_user = input()
+                #                     delete_user = input()
                                    
-                                    user=(del_user [first_name,last_name,contact,user_name,email,password])
-                                    del user[first_name,last_name,contact,user_name,email,password]
+                #                     user=(del_user [first_name,last_name,contact,user_name,email,password])
+                #                     del user[first_name,last_name,contact,user_name,email,password]
                                     
                               
 
