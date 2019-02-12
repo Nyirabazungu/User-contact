@@ -13,7 +13,7 @@
         2.  A web browser.
         3.  This link https://github.com/Nyirabazungu/User-contact/.
 
-        4.  Install the Python-user contactby cloning this           repository:https://Nyirabazungu.github.io/User-contact/
+        4.  Install the Python-user contact by cloning this           repository:https://Nyirabazungu.github.io/User-contact/
         5.Open from any linient browser.
 
 
@@ -25,10 +25,7 @@
 
 
 ## technologies used
-        HTML
-        CSS
-        Bootstrap
-        JQuery
+    Python
 
        
 ## copyright
