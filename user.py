@@ -59,7 +59,6 @@ class User:
         '''
         return cls.user_list
 
-
         for user in cls.user_list:
             if user.email== email:
                     return True

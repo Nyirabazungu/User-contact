@@ -45,6 +45,9 @@ def main():
      print("Hello Welcome to your user list. What is your name?")
      user_name = input()
 
+     print("Hello Welcome to your credential list. What is your password?")
+     user_name = input()
+
      print(f"Hello {user_name}. what would you like to do?")
      print('\n')
 
