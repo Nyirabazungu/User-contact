@@ -48,20 +48,19 @@ def main():
      print(f"Hello {user_name}. what would you like to do?")
      print('\n')
 
-         while True:
-     print("Use these short codes : cc - create a new user, dc - display users, fc -find a user, ex -exit the user list ")
+     while True:
+                    print("Use these short codes : cc - create a new contact, dc - display contacts, fc -find a contact, ex -exit the contact list ")
 
-     short_code = input().lower()
+                    short_code = input().lower()
 
-        if short_code == 'cc':
-                            
-     print("New User")
-     print("-"*10)
+                    if short_code == 'cc':
+                            print("New User")
+                            print("-"*10)
 
-     print ("First name ....")
-     first_name = input()
-     print("Last name ...")
-                           
+                            print ("First name ....")
+                            first_name = input()
+
+                            print("Last name ...")
                             last_name = input()
 
                             print("contact ...")
@@ -76,6 +75,7 @@ def main():
                             print("Password ...")
                             password = input("Enter password: ")
 
+                        #     log=login("","")
 
 
                             save_users(create_user(first_name,last_name,contact,user_name,email,password)) # create and save new contact.
@@ -117,4 +117,7 @@ def main():
                             print("Bye .......")
                             break
                     else:
-                            print("I really didn't get that. Please use the short codes")    
+                            print("I really didn't get that. Please use the short codes") 
+if __name__ == '__main__':
+
+    main()

@@ -1,51 +1,58 @@
-# class Credintial:
-# import pyperclip
-#     """
-#     Class that generates new instances of credintial .
-#     """
-#     credintial_list=[]#Empty credintial list
-#     # Init method up here
-#     def __init__(user_name,email,password):
+import pyperclip
+class Credintial:
 
-#         self.user_name = user_name
-#         self.email = email
-#         self.password = password
+    """
+    Class that generates new instances of credintial .
+    """
+    credintial_list=[] #Empty credintial list
+
+    # Init method up here
+    def __init__(user_name,email,password):
+
+        self.user_name = user_name
+        self.email = email
+        self.password = password
         
-#     def save_credintial(self):
+    def save_credintial(self):
 
-#         '''
-#         save_credintial method saves credintial objects into credintial_list
-#         '''
+        '''
+        save_credintial method saves credintial objects into credintial_list
+        '''
 
-#        Credintial.credintial_list.append(self)
+        Credintial.credintial_list.append(self)
 
-#     def delete_credintial(self):
+    def delete_credintial(self):
 
-#         '''
-#         delete_credintial method deletes a saved credintial from the credintial_list
-#         '''
+        '''
+        delete_credintial method deletes a saved credintial from the credintial_list
+        '''
 
-#         Credintial.credintial_list.remove(self) 
+        Credintial.credintial_list.remove(self) 
 
     
 
-#     @classmethod
-#     def find_by_email(cls,email): 
+    @classmethod
+    def find_by_email(cls,email): 
      
-#         '''
-#         Method that takes in a email and returns a credintial that matches that email.
+        '''
+        Method that takes in a email and returns a credintial that matches that email.
 
-#         '''
+        '''
 
-#         for credintial in cls.credintial_list:
-#             if credintial.email == email:
-#                 return credintial   
+        for credintial in cls.credintial_list:
+            if credintial.email == email:
+                return credintial   
     
    
-#         # for credintial in cls.credintial_list:
-#         #     if credintial.email== email:
-#         #             return True
+        # for credintial in cls.credintial_list:
+        #     if credintial.email== email:
+        #             return True
 
-#         return False    
+        return False   
+       
+    @classmethod
+    def copy_email(cls,email):
+        user_found = User.find_by_email(email)
+        pyperclip.copy(user_found.email)   
         
              
